@@ -1,3 +1,4 @@
 import React from 'react';
+import { CardList } from '../../components';
 
-export const OurApp = () => <div>Sweeeeeet</div>;
+export const OurApp = () => <CardList />;
