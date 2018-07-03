@@ -4,7 +4,9 @@ import cardFormReducer from './components/CardForm/CardFormReducer';
 
 const reducer = combineReducers({
   router: routerReducer,
-  cardFlow: cardFormReducer,
+  components: combineReducers({
+    cardFlow: cardFormReducer,
+  }),
 });
 
 export default reducer;

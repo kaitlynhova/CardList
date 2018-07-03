@@ -1,16 +1,11 @@
 import { throwUndefinedProperties } from '../../utils/object';
 
 export const types = throwUndefinedProperties({
-  UPDATE_NAME: 'CardForm/UPDATE_NAME',
-  UPDATE_LOCATION: 'CardForm/UPDATE_LOCATION',
+  UPDATE_FORM_FIELD: 'CardForm/UPDATE_FORM_FIELD',
 });
 
-export const updateName = name => ({
-  type: types.UPDATE_NAME,
-  name,
-});
-
-export const updateLocation = location => ({
-  type: types.UPDATE_LOCATION,
-  location,
+export const updateFormField = (value, field) => ({
+  type: types.UPDATE_FORM_FIELD,
+  value,
+  field,
 });

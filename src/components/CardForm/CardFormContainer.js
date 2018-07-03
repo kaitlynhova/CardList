@@ -1,18 +1,15 @@
 import { connect } from 'react-redux';
 import * as CardFormActions from './CardFormActions';
 import { CardFormView } from './CardFormView';
+import { cardFormSelectors } from './CardFormReducer';
 
 const mapStateToProps = state => ({
-  name: state.name,
-  location: state.location,
+  ...cardFormSelectors.getState(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateName: (name) => {
-    dispatch(CardFormActions.updateName(name));
-  },
-  updateLocation: (location) => {
-    dispatch(CardFormActions.updateLocation(location));
+  updateFormField: (value, field) => {
+    dispatch(CardFormActions.updateFormField(value, field));
   },
 });
 
